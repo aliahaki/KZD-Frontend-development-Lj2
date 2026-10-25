@@ -1,0 +1,56 @@
+/* --- RESET & ALGEMENE CSS --- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #333333;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* --- HERBRUIKBAAR GRID SYSTEEM --- */
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+
+/* --- ALGEMENE RESPONSIVE CSS --- */
+
+@media (max-width: 992px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .grid-2,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
