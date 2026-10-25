@@ -1,0 +1,241 @@
+.header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.header-boven {
+    background-color: #ffffff;
+    padding: 20px 0;
+}
+
+.header-boven-inhoud {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-strepen {
+    color: #FEB62A;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: -5px;
+}
+
+.logo-tekst {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-naam {
+    font-size: 24px;
+    font-weight: 800;
+    color: #222222;
+}
+
+.logo-subtitel {
+    margin-top: 2px;
+    font-size: 8px;
+    color: #888888;
+}
+
+.header-informatie {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.informatie-blok {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.informatie-icoon {
+    color: #FEB62A;
+    font-size: 22px;
+}
+
+.informatie-blok div {
+    display: flex;
+    flex-direction: column;
+}
+
+.informatie-titel {
+    margin-bottom: 3px;
+    font-size: 9px;
+    color: #888888;
+}
+
+.informatie-blok strong {
+    font-size: 11px;
+    color: #222222;
+}
+
+.offerte-knop {
+    padding: 15px 22px;
+    background-color: #FEB62A;
+    color: #ffffff;
+    border: none;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.offerte-knop:hover {
+    background-color: #e5a51f;
+}
+
+.navigatie {
+    background-color: #ffffff;
+    border-top: 1px solid #eeeeee;
+}
+
+.navigatie-inhoud {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigatie-links {
+    display: flex;
+    align-items: center;
+}
+
+.navigatie-links a {
+    position: relative;
+    padding: 18px 20px;
+    color: #222222;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.navigatie-links a:hover,
+.navigatie-links a.actief {
+    color: #FEB62A;
+}
+
+.navigatie-links a.actief::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    height: 2px;
+    background-color: #FEB62A;
+}
+
+.zoek-knop {
+    border: none;
+    background: none;
+    color: #222222;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.menu-knop {
+    display: none;
+    background: none;
+    border: none;
+    color: #FEB62A;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .header-boven {
+        padding: 18px 0;
+    }
+
+    .header-informatie .informatie-blok:nth-child(2),
+    .offerte-knop {
+        display: none;
+    }
+
+    .menu-knop {
+        display: block;
+    }
+
+    .navigatie {
+        border-top: none;
+    }
+
+    .navigatie-inhoud {
+        position: relative;
+    }
+
+    .navigatie-links {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 220px;
+        flex-direction: column;
+        align-items: stretch;
+        background-color: #ffffff;
+        border: 1px solid #eeeeee;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+        z-index: 1000;
+    }
+
+    .navigatie-links.open {
+        display: flex;
+    }
+
+    .navigatie-links a {
+        padding: 14px 18px;
+    }
+
+    .navigatie-links a.actief::after {
+        display: none;
+    }
+
+    .navigatie-links a:hover,
+    .navigatie-links a.actief {
+        background-color: #FEB62A;
+        color: #ffffff;
+    }
+
+    .zoek-knop {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-boven {
+        padding: 14px 0;
+    }
+
+    .logo-strepen {
+        font-size: 23px;
+    }
+
+    .logo-naam {
+        font-size: 20px;
+    }
+
+    .logo-subtitel {
+        display: none;
+    }
+
+    .header-informatie {
+        display: none;
+    }
+
+    .menu-knop {
+        display: block;
+        font-size: 24px;
+    }
+
+    .navigatie-links {
+        width: 190px;
+    }
+}
