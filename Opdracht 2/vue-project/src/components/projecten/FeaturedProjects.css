@@ -1,0 +1,154 @@
+.projecten-sectie {
+    padding: 65px 0;
+    background-color: #f7f7f7;
+}
+
+.project-filters {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0 0 8px;
+    color: #555555;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.filter:hover,
+.filter.actief {
+    color: #FEB62A;
+}
+
+.filter.actief::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 20px;
+    height: 2px;
+    background-color: #FEB62A;
+}
+
+.project-kaart {
+    position: relative;
+    min-height: 270px;
+    overflow: hidden;
+    background-color: #dddddd;
+}
+
+.project-kaart img {
+    width: 100%;
+    height: 100%;
+    min-height: 270px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    background-color: rgba(25, 25, 25, 0.82);
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-kaart:first-child .project-overlay {
+    opacity: 1;
+}
+
+.project-kaart:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-kaart:hover img {
+    transform: scale(1.06);
+}
+
+.project-inhoud {
+    padding: 30px;
+}
+
+.project-lijn {
+    width: 28px;
+    height: 2px;
+    background-color: #FEB62A;
+    margin-bottom: 16px;
+}
+
+.project-inhoud h3 {
+    margin-bottom: 14px;
+    font-size: 20px;
+}
+
+.project-inhoud p {
+    margin-bottom: 20px;
+    color: #dddddd;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.project-inhoud a {
+    color: #FEB62A;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+@media (max-width: 992px) {
+    .projecten-sectie {
+        padding: 55px 0;
+    }
+
+    .project-kaart {
+        min-height: 250px;
+    }
+
+    .project-kaart img {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    .projecten-sectie {
+        padding: 45px 0;
+    }
+
+    .project-filters {
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .filter {
+        font-size: 9px;
+    }
+
+    .project-kaart {
+        min-height: 230px;
+    }
+
+    .project-kaart img {
+        min-height: 230px;
+    }
+
+    .project-inhoud {
+        padding: 22px;
+    }
+
+    .project-inhoud h3 {
+        font-size: 17px;
+    }
+
+    .project-inhoud p {
+        font-size: 11px;
+    }
+}
