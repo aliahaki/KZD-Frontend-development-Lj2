@@ -1,0 +1,246 @@
+.hero {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.4s ease;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.30);
+}
+
+.hero-inhoud {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-tekst {
+    max-width: 650px;
+}
+
+.hero-lijn {
+    width: 32px;
+    height: 3px;
+    background-color: #FEB62A;
+    margin-bottom: 18px;
+}
+
+.hero-label {
+    display: block;
+    margin-bottom: 20px;
+    color: #222222;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    max-width: 650px;
+    margin-bottom: 28px;
+    color: #222222;
+    font-size: 54px;
+    line-height: 1.05;
+    font-weight: 800;
+}
+
+.hero-knoppen {
+    display: flex;
+    gap: 12px;
+}
+
+.hero-knop {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 130px;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.hero-knop-oranje {
+    background-color: #FEB62A;
+    color: #ffffff;
+    border: 1px solid #FEB62A;
+}
+
+.hero-knop-oranje:hover {
+    background-color: #e5a51f;
+    border-color: #e5a51f;
+}
+
+.hero-knop-wit {
+    background-color: #ffffff;
+    color: #222222;
+    border: 1px solid #222222;
+}
+
+.hero-knop-wit:hover {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+.slider-knop {
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    width: 34px;
+    height: 42px;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    color: #444444;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.slider-links {
+    left: 20px;
+}
+
+.slider-rechts {
+    right: 20px;
+}
+
+.slider-knop:hover {
+    background-color: #FEB62A;
+    color: #ffffff;
+}
+
+.introductie {
+    padding: 45px 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.introductie-inhoud {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 60px;
+}
+
+.introductie h2 {
+    color: #FEB62A;
+    font-size: 27px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.introductie p {
+    color: #666666;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.introductie-knop {
+    padding: 15px 24px;
+    background-color: #FEB62A;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.introductie-knop:hover {
+    background-color: #e5a51f;
+}
+
+@media (max-width: 992px) {
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero h1 {
+        max-width: 550px;
+        font-size: 42px;
+    }
+
+    .introductie-inhoud {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .introductie-knop {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 440px;
+        background-position: center;
+        align-items: flex-end;
+    }
+
+    .hero-overlay {
+        background-color: rgba(255, 255, 255, 0.55);
+    }
+
+    .hero-inhoud {
+        padding-bottom: 45px;
+    }
+
+    .hero-tekst {
+        max-width: 100%;
+    }
+
+    .hero-label {
+        font-size: 10px;
+    }
+
+    .hero h1 {
+        font-size: 31px;
+        line-height: 1.08;
+        margin-bottom: 20px;
+    }
+
+    .hero-knoppen {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .hero-knop {
+        width: 100%;
+    }
+
+    .slider-knop {
+        top: 35%;
+        width: 28px;
+        height: 34px;
+        font-size: 20px;
+    }
+
+    .slider-links {
+        left: 8px;
+    }
+
+    .slider-rechts {
+        right: 8px;
+    }
+
+    .introductie {
+        padding: 35px 0;
+    }
+
+    .introductie h2 {
+        font-size: 23px;
+        white-space: normal;
+    }
+
+    .introductie p {
+        font-size: 12px;
+    }
+
+    .introductie-knop {
+        width: 100%;
+        text-align: center;
+    }
+}
