@@ -172,3 +172,47 @@
   line-height: 1.5;
   margin-bottom: 12px;
 }
+
+
+/* Dieren uit de API */
+
+.dieren-sectie {
+  margin-top: 45px;
+  margin-bottom: 35px;
+}
+
+.dieren-sectie h2 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.dieren-beschrijving {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.dier-kaart {
+  background-color: white;
+  color: #222222;
+  padding: 18px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+}
+
+.dier-icoon {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.dier-kaart h3 {
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.dier-kaart p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 7px;
+}
