@@ -2,6 +2,7 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Categories from './components/Categories';
+import Animals from './components/Animals';
 import Footer from './components/Footer';
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
 
           {/* Categorieën ophalen uit JSON */}
           <Categories />
+
+          {/* Dieren ophalen uit de Animals API */}
+          <Animals />
 
           {/* Winkelinformatie */}
           <section
